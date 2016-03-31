@@ -9,7 +9,7 @@ public class Runner {
 
 		String name="newName";
 		Bean2 bean21 = new Bean2();
-		Bean2 bean22 = new Bean2(1, "uniqueName", 2.2);
+		Bean2 bean22 = new Bean2(1, name, 2.2);
 		Bean2 bean23 = new Bean2(2, name, 2.2);
 		Bean2 bean24 = new Bean2(2, name, 2.4);
 
@@ -25,9 +25,9 @@ public class Runner {
 
 				String message = "The objects " + i + " and " + j;
 				if (Analyzer.equalObjects(objects[i], objects[j])) {
-					System.out.println(message + " is equals");
+					System.out.println(message + " are equals");
 				} else {
-					System.out.println(message + " isn't equals");
+					System.out.println(message + " aren't equals");
 				}
 			}
 		}
