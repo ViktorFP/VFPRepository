@@ -13,7 +13,7 @@ public final class Analyzer {
 		Class<?> class2 = o2.getClass();
 
 		if (class1 != class2) {
-			System.out.println("Objects belong another classes:");
+			System.out.println("Objects belong different classes:");
 			System.out.println("class1 = " + class1.getSimpleName()
 					+ " || class2 = " + class2.getSimpleName());
 			return false;
