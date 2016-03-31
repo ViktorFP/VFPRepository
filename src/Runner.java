@@ -9,8 +9,8 @@ public class Runner {
 
 		String name="newName";
 		Bean2 bean21 = new Bean2();
-		Bean2 bean22 = new Bean2(1, new String("123"), 2.2);
-		Bean2 bean23 = new Bean2(2, new String("123"), 2.2);
+		Bean2 bean22 = new Bean2(1, name, 2.2);
+		Bean2 bean23 = new Bean2(2, name, 2.2);
 		Bean2 bean24 = new Bean2(2, name, 2.4);
 
 		Object[] objects = { bean11, bean12, bean21, bean22, bean23, bean24 };
