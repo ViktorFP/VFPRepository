@@ -8,7 +8,7 @@ import by.epamlab.annotations.Equal;
 public final class Analyzer {
 	private final static Class<? extends Annotation> ANNOTATION_CLASS = Equal.class;
 
-	public static boolean equalObjects(Object o1, Object o2) {
+	public static boolean equalObjects(Object o1, Object o2) throws IllegalArgumentException, IllegalAccessException {
 		Class<?> class1 = o1.getClass();
 		Class<?> class2 = o2.getClass();
 
@@ -31,8 +31,7 @@ public final class Analyzer {
 						String name1 = fieldObj1.getName();
 						String name2 = fieldObj2.getName();
 
-						if (name1.equals(name2)) {
-							try {
+						if (name1.equals(name2)) {							
 								fieldObj1.setAccessible(true);
 								fieldObj2.setAccessible(true);
 								Object data1 = fieldObj1.get(o1);
@@ -51,11 +50,7 @@ public final class Analyzer {
 									System.out.println(name1 + "1 = " + data1
 											+ " || " + name2 + "2 = " + data2);
 									return false;
-								}
-							} catch (IllegalArgumentException
-									| IllegalAccessException e) {
-								System.out.println("Error in get data");
-							}
+								}							
 						}
 					}
 				}
