@@ -1,2 +1,0 @@
-# VFPRepository
-repository for EPAM
